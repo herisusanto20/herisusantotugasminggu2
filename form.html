@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Form Pendaftaran Beasiswa</title>
+    </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+<h3>Form Pendaftaran Beasiswa</h3>
+<form action="" method="post">
+    <table>
+        <tr>
+            <td>Nama :</td>
+            <td><input type="text" id="nama" required></td>
+            
+        </tr>
+        <tr>
+            <td>NIM :</td>
+            <td><input type="text" id="pass" required></td>
+        </tr>
+        <tr>
+            <td>ID kegiatan :</td>
+            <td><input type="number" id="ID" required></td>
+        </tr>
+        <tr>
+            <td>Tanggal Lahir :</td>
+            <td><input type="date" id="tgl" required></td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin :</td>
+            <td><input type="radio" name="jk" id="jenis" required>Laki-Laki
+                <input type="radio" name="jk" id="jenis" required>Perempuan
+            </td>
+        </tr>
+        <tr>
+            <td>Hobi :</td>
+            <td><input type="checkbox" id="renang" required>Renang
+                <input type="checkbox" id="lari" required>Lari
+                <input type="checkbox" id="fotografi" required>Fotografi
+                <input type="checkbox" id="desain" required>Desain Grafis
+            </td>
+        </tr>
+        <tr>
+            <td>Semester :</td>
+            <td><select>
+                    <option id="1">1</option>
+                    <option id="2">2</option>
+                    <option id="3">3</option>
+                    <option id="4">4</option>
+                    <option id="5">5</option>
+                    <option id="6">6</option>
+                    <option id="7">7</option>
+                    <option id="8">8</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="submitdata()">Daftar</button>
+
+            </td>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript">
+
+    function submitdata() {
+        var nama = document.getElementById("nama").value;
+        var nim = document.getElementById("pass").value;
+        var id = document.getElementById("ID").value;
+        var Tanggal = document.getElementById("tgl").value;
+        alert("nama : " + nama + " " + "nim : " + nim + " " + "ID Kegiatan : " + " "  + id + " " +  "Tanggal Lahir : " + Tanggal + " " + " " + "Terdaftar" );
+        if(nama != "" && nim != "" && id != "" && Tanggal !=""){
+            return true;
+        } else {
+            alert('Anda Harus Mengisi data dengan lengkap!!!');
+        }
+        
+    }
+</script>
+</body>
+</html>
